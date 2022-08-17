@@ -1,0 +1,221 @@
+/* ROCK PAPER SCISSORS
+FLORENT VASSEUR
+AOUT 2022 */
+
+@font-face {
+    font-family: 'link_startregular';
+    src: url('font/linkstart-webfont.eot');
+    src: url('font/font/linkstart-webfont.eot?#iefix') format('embedded-opentype'),
+         url('font/linkstart-webfont.woff2') format('woff2'),
+         url('font/linkstart-webfont.woff') format('woff'),
+         url('font/linkstart-webfont.ttf') format('truetype'),
+         url('font/linkstart-webfont.otf') format('otf'),
+         url('font/linkstart-webfont.svg#link_startregular') format('svg');
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'link_startitalic';
+    src: url('font/linkstart-italic-webfont.eot');
+    src: url('font/linkstart-italic-webfont.eot?#iefix') format('embedded-opentype'),
+         url('font/linkstart-italic-webfont.woff2') format('woff2'),
+         url('font/linkstart-italic-webfont.woff') format('woff'),
+         url('font/linkstart-italic-webfont.ttf') format('truetype'),
+         url('font/linkstart-italic-webfont.otf') format('oft'),
+         url('font/linkstart-italic-webfont.svg#link_startitalic') format('svg');
+    font-weight: normal;
+    font-style: italic;
+}
+
+*
+{
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body
+{
+    background-color: #505581;
+}
+
+
+/* HEADER */
+header
+{
+    height: 15vh;
+    background-color: #2e2f5b ;
+    display: flex;
+}
+
+h1 {
+    color: #faf0ca;
+    text-align: center;
+    margin: auto;
+    font-family: link_startitalic, sans-serif ;
+    font-size: 4rem;
+}
+
+
+
+/* MAIN */
+
+main
+{
+    height: 80vh;
+}
+
+/* INFORMATION */
+
+.title
+{
+    padding: 3.5rem 0;
+}
+
+h2, h3
+{
+    text-align: center;
+    color: #f4d35e;
+}
+
+h2
+{
+    font-size: 3rem;
+    padding-bottom: 1.5rem;
+}
+
+h3
+{
+    font-size: 2rem;
+}
+
+/* SCORES */
+
+.score_container
+{
+    display: flex;
+    justify-content: center;
+    gap: 30px;
+    align-items: center;
+}
+
+.score
+{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.display_score
+{
+    text-align: center;
+    font-size: 1.3rem;
+    font-weight: 800;
+    color: #f4d35e;
+    padding-top: 0.5rem;
+}
+
+#VS
+{
+    font-size: 4rem;
+    font-family: link_startitalic, sans-serif;
+    color: #faf0ca;
+}
+
+
+/* WEAPONS */
+
+#weapon_container
+{
+    display: flex;
+    justify-content: center;
+    gap: 50px;
+    margin-top: 50px;
+}
+
+.weapon
+{
+    width: 150px;
+    height: 150px;
+    border-radius: 10px;
+    background-color: rgba(255, 255, 255, 0.2);
+    padding: 0.5rem;
+}
+
+#weapon_container .weapon:hover
+{
+    background-color: rgba(255, 255, 255, 0.5);
+}
+
+
+footer
+{
+    height: 5vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+#end_game
+{
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 5;
+    height: 100%;
+    width: 100%;
+    background-color: rgba(0, 0, 0, 0.8);
+}
+
+#end_popup
+{
+    background-color: hsl(239,33%,15%);
+    border-radius: 20px;
+    height: 300px;
+    width: 400px;
+    margin: auto;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 50px;
+}
+
+#end_popup button
+{
+    font-size: 3rem;
+    border-radius: 20px;
+    padding: 10px 15px;
+    background-color: #505581;
+    color: white;
+}
+
+#end_popup p
+{
+    font-size: 3rem;
+    color: white;
+    font-family: sans-serif;
+}
+
+.visible
+{
+    display: flex
+}
+
+.invisible
+{
+    display: none;
+}
+
+.fa-github:hover 
+{
+    transform: rotate(360deg);
+    transition: 1s;
+}
+
+a
+{
+    text-decoration: none;
+    color: black;
+}

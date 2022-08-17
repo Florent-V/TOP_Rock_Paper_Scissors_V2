@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <link
+      rel="stylesheet"
+      href="https://use.fontawesome.com/releases/v5.8.2/css/all.css"
+    />
+    <title>Rock Paper Scissors</title>
+</head>
+<body>
+    <header>
+        <h1>Rock Paper Scissors</h1>
+    </header>
+    <main>
+        <!-- Information -->
+        <section class="title">
+            <h2>Man VS Computer</h2>
+            <h3>First to score 5 points wins the game !</h3>
+        </section>
+
+        <!-- Score -->
+        <div class="score_container">
+            <div class="score">
+                <div class="weapon" id="player"><img src="" alt=""></div>
+                <p class="display_score">Player : <span id="score_player">0</span></p>
+            </div>
+            <p id="VS">VS</p>
+            <div class="score">
+                <div class="weapon" id="computer"><img src="" alt=""></div>
+                <p class="display_score">Computer : <span id="score_computer">0</span></p>
+            </div>
+        </div>
+
+
+
+        <!-- Weapons -->
+        <div id="weapon_container">
+            <div class="weapon" id="rock"><img class="logo_weapon" src="img/rock.svg" alt=""></div>
+            <div class="weapon" id="paper"><img class="logo_weapon" src="img/paper.svg" alt=""></div>
+            <div class="weapon" id="scissors"><img class="logo_weapon" src="img/scissors.svg" alt=""></div>
+        </div>
+
+
+    </main>
+    <footer>
+        <p>Copyright &copy 2022 Florent Vasseur <a href="https://github.com/Florent-V"><i class="fab fa-github"></i></a></p>
+
+    </footer>
+
+    <div id="end_game" class="invisible">
+        <div id="end_popup">
+            <p>You lost...</p>
+            <button>Play Again</button>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
