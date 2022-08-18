@@ -1,5 +1,5 @@
 
-let choice = ["rock", "paper", "scissors"];
+let choice = ["Rock", "Paper", "Scissors"];
 let computerSelection = getComputerChoice();
 
 function getComputerChoice() {
@@ -17,72 +17,30 @@ function playRound(playerSelection, computerSelection) {
     display_choice(playerSelection, computerSelection);
     console.log(`You choose ${playerSelection}`);
     console.log(`Computer choose ${computerSelection}`);
-    if (playerSelection === "rock") {
-      switch (computerSelection) {
-        case "rock":
-          result.computer++;
-          result.player++
-          result.msg1 = "Tie Game !";
-          result.msg2 = "One point each";
-          return result;
-          break;
-        case "paper":
-          result.computer++;
-          result.msg1 = "You Lose !";
-          result.msg2 = "Paper beats Rock !"
-          return result;
-          break;
-        case "scissors":
-          result.player++;
-          result.msg1 = "You Win !";
-          result.msg2 = "Rock beats Scissors !"
-          return result;
-          break;
-      }
-    } else if (playerSelection === "paper") {
-      switch (computerSelection) {
-        case "rock":
-          result.player++;
-          result.msg1 = "You Win !";
-          result.msg2 = "Paper beats Rock !"
-          return result;
-          break;
-        case "paper":
-          result.computer++;
-          result.player++;
-          result.msg1 = "Tie Game !";
-          result.msg2 = "One point each";
-          return result;
-          break;
-        case "scissors":
-          result.computer++;
-          result.msg1 = "You Lose !";
-          result.msg2 = "Scissors beats Paper !"
-          return result;  
-          break;
-      }
-    } else if (playerSelection === "scissors") {
-      switch (computerSelection) {
-        case "rock":
-          result.computer++;
-          result.msg1 = "You Lose !";
-          result.msg2 = "Rock beats Scissors !"
-          return result;
-          break;
-        case "paper":
-          result.player++;
-          result.msg1 = "You Win !";
-          result.msg2 = "Scissors beats Paper !"
-          return result;
-          break;
-        case "scissors":
-          result.computer++;
-          result.player++
-          result.msg1 = "Tie Game !";
-          result.msg2 = "One point each";
-          return result;
-          break;
-      }
+    if (playerSelection === computerSelection) {
+      result.computer++;
+      result.player++;
+      result.msg1 = "Tie Game !";
+      result.msg2 = "One point each";
+      return result;
+    } else if (
+      (playerSelection === "Paper" && computerSelection === "Rock") || 
+      (playerSelection === "Rock" && computerSelection === "Scissors") || 
+      (playerSelection === "Scissors" && computerSelection === "Paper")
+      ) {
+        result.player++;
+        result.msg1 = "You Win !";
+        result.msg2 = `${playerSelection} beats ${computerSelection} !`
+        return result;
+    } else if (
+      (playerSelection === "Paper" && computerSelection === "Scissors") || 
+      (playerSelection === "Rock" && computerSelection === "Paper") || 
+      (playerSelection === "Scissors" && computerSelection === "Rock")
+      ) {
+        result.computer++;
+        result.msg1 = "You Lose !";
+        result.msg2 = `${computerSelection} beats ${playerSelection} !`
+        return result;
     }
 }
 
@@ -95,8 +53,8 @@ function update_score() {
 }
 
 function display_choice(player, computer) {
-    document.querySelector("#player > img").setAttribute('src', "img/"+player+".svg");
-    document.querySelector("#computer > img").setAttribute('src', "img/"+computer+".svg");
+    document.querySelector("#player > img").setAttribute('src', "img/"+player.toLowerCase()+".svg");
+    document.querySelector("#computer > img").setAttribute('src', "img/"+computer.toLowerCase()+".svg");
 }
 
 function display_end() {
@@ -126,15 +84,15 @@ function start(playerchoice) {
 }
 
 document.getElementById("rock").addEventListener('click', function(){
-    start("rock");
+    start("Rock");
 });
 
 document.getElementById("paper").addEventListener('click', function(){
-    start("paper");
+    start("Paper");
 });
 
 document.getElementById("scissors").addEventListener('click', function(){
-    start("scissors");
+    start("Scissors");
 });
 
 document.querySelector('#end_popup > button').addEventListener('click', function() {
