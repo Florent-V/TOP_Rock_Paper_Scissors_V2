@@ -1,9 +1,9 @@
-
-let choice = ["Rock", "Paper", "Scissors"];
+const choices = ['Rock', 'Paper', 'Scissors'];
 let computerSelection = getComputerChoice();
 
+
 function getComputerChoice() {
-    return choice[Math.floor(Math.random()*3)]
+    return choices[Math.floor(Math.random()*3)]
 }
   
 const result = {
@@ -14,7 +14,7 @@ const result = {
 }
 
 function playRound(playerSelection, computerSelection) {
-    display_choice(playerSelection, computerSelection);
+    displayChoice(playerSelection, computerSelection);
     console.log(`You choose ${playerSelection}`);
     console.log(`Computer choose ${computerSelection}`);
     if (playerSelection === computerSelection) {
@@ -44,7 +44,7 @@ function playRound(playerSelection, computerSelection) {
     }
 }
 
-function update_score() {
+function updateScore() {
     document.getElementById("score_player").innerText = result.player;
     document.getElementById("score_computer").innerText = result.computer;
     document.getElementById("score_player").innerText = result.player;
@@ -52,21 +52,21 @@ function update_score() {
     document.querySelector(".title > h3").innerText = result.msg2;
 }
 
-function display_choice(player, computer) {
+function displayChoice(player, computer) {
     document.querySelector("#player > img").setAttribute('src', "img/"+player.toLowerCase()+".svg");
     document.querySelector("#computer > img").setAttribute('src', "img/"+computer.toLowerCase()+".svg");
 }
 
-function display_end() {
+function displayEnd() {
     document.getElementById('end_game').classList.toggle('invisible');
     document.getElementById('end_game').classList.toggle('visible');
     document.querySelector("#player > img").setAttribute('src', "");
     document.querySelector("#computer > img").setAttribute('src', "");
 }
 
-function check_end() {
+function checkEnd() {
     if (result.player === 5 || result.computer==5) {
-        display_end()
+        displayEnd()
     }
     if (result.player === result.computer) {
         document.querySelector('#end_popup > p').innerText = "It's time game !"
@@ -79,8 +79,8 @@ function check_end() {
 
 function start(playerchoice) {
     playRound(playerchoice, getComputerChoice());
-    update_score();
-    check_end();
+    updateScore();
+    checkEnd();
 }
 
 document.getElementById("rock").addEventListener('click', function(){
@@ -100,6 +100,6 @@ document.querySelector('#end_popup > button').addEventListener('click', function
     result.player = 0;
     result.msg1 = "Man VS Computer";
     result.msg2 = "First to score 5 points wins the game !";
-    update_score();
-    display_end();
+    updateScore();
+    displayEnd();
 })

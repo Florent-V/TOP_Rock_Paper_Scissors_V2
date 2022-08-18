@@ -9,6 +9,7 @@
       rel="stylesheet"
       href="https://use.fontawesome.com/releases/v5.8.2/css/all.css"
     />
+    <script async defer src='script.js'></script>
     <title>Rock Paper Scissors</title>
 </head>
 <body>
@@ -25,12 +26,12 @@
         <!-- Score -->
         <div class="score_container">
             <div class="score">
-                <div class="weapon" id="player"><img src="" alt=""></div>
+                <div class="weapon" id="player"><img src="img/empty.png" alt="S'affiche ici l'image du choix du joueur"></div>
                 <p class="display_score">Player : <span id="score_player">0</span></p>
             </div>
             <p id="VS">VS</p>
             <div class="score">
-                <div class="weapon" id="computer"><img src="" alt=""></div>
+                <div class="weapon" id="computer"><img src="img/empty.png" alt="S'affiche ici l'image du choix de l'ordintateur"></div>
                 <p class="display_score">Computer : <span id="score_computer">0</span></p>
             </div>
         </div>
@@ -39,9 +40,9 @@
 
         <!-- Weapons -->
         <div id="weapon_container">
-            <div class="weapon" id="rock"><img class="logo_weapon" src="img/rock.svg" alt=""></div>
-            <div class="weapon" id="paper"><img class="logo_weapon" src="img/paper.svg" alt=""></div>
-            <div class="weapon" id="scissors"><img class="logo_weapon" src="img/scissors.svg" alt=""></div>
+            <div class="weapon" id="rock"><img class="logo_weapon" src="img/rock.svg" alt="Image du choix ROCK"></div>
+            <div class="weapon" id="paper"><img class="logo_weapon" src="img/paper.svg" alt="Image du choix PAPER"></div>
+            <div class="weapon" id="scissors"><img class="logo_weapon" src="img/scissors.svg" alt="Image du choix SCISSORS"></div>
         </div>
 
 
@@ -58,6 +59,5 @@
         </div>
     </div>
 
-    <script src="script.js"></script>
 </body>
 </html>

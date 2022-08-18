@@ -45,7 +45,7 @@ body
 header
 {
     height: 15vh;
-    background-color: #2e2f5b ;
+    background-color: #2e2f5b;
     display: flex;
 }
 
@@ -53,7 +53,7 @@ h1 {
     color: #faf0ca;
     text-align: center;
     margin: auto;
-    font-family: link_startitalic, sans-serif ;
+    font-family: link_startitalic, sans-serif;
     font-size: 4rem;
 }
 
@@ -143,6 +143,7 @@ h3
     padding: 0.5rem;
 }
 
+
 #weapon_container .weapon:hover
 {
     background-color: rgba(255, 255, 255, 0.5);
@@ -200,7 +201,7 @@ footer
 
 .visible
 {
-    display: flex
+    display: flex;
 }
 
 .invisible
