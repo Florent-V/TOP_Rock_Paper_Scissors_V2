@@ -57,37 +57,39 @@ h1 {
     font-size: 4rem;
 }
 
-
-
 /* MAIN */
 
 main
 {
     height: 80vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
 }
 
 /* INFORMATION */
 
 .title
 {
-    padding: 3.5rem 0;
+    padding: 2.5rem 0;
 }
 
 h2, h3
 {
     text-align: center;
     color: #f4d35e;
+    font-family: link_startregular, sans-serif;
 }
 
 h2
 {
-    font-size: 3rem;
+    font-size: 3.5rem;
     padding-bottom: 1.5rem;
 }
 
 h3
 {
-    font-size: 2rem;
+    font-size: 2.5rem;
 }
 
 /* SCORES */
@@ -98,6 +100,7 @@ h3
     justify-content: center;
     gap: 30px;
     align-items: center;
+    max-width: 95vw;
 }
 
 .score
@@ -130,14 +133,14 @@ h3
 {
     display: flex;
     justify-content: center;
-    gap: 50px;
-    margin-top: 50px;
+    gap: 2rem;
+    margin-bottom: 50px;
 }
 
 .weapon
 {
     width: 150px;
-    height: 150px;
+    aspect-ratio: 1/1;
     border-radius: 10px;
     background-color: rgba(255, 255, 255, 0.2);
     padding: 0.5rem;
@@ -219,4 +222,42 @@ a
 {
     text-decoration: none;
     color: black;
+}
+
+
+@media all and (max-device-width: 480px)
+{
+    header
+    {
+        height: 20vh;
+    }
+    main
+    {
+        height: 75vh;
+    }
+    .weapon
+    {
+    max-width: 120px;
+    aspect-ratio: 1/1;
+    padding: 0.2rem;
+    }
+
+    .title
+    {
+        padding-top: 1.5rem;
+        padding-bottom: 2.5rem;
+    }
+
+    #weapon_container .weapon
+    {
+        max-width: 100px;
+    }
+
+    #weapon_container
+    {
+        display: flex;
+        justify-content: center;
+        gap: 1rem;
+        margin-bottom: 50px;
+    }
 }

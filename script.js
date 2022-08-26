@@ -60,8 +60,8 @@ function displayChoice(player, computer) {
 function displayEnd() {
     document.getElementById('end_game').classList.toggle('invisible');
     document.getElementById('end_game').classList.toggle('visible');
-    document.querySelector("#player > img").setAttribute('src', "");
-    document.querySelector("#computer > img").setAttribute('src', "");
+    document.querySelector("#player > img").setAttribute('src', "img/empty.png");
+    document.querySelector("#computer > img").setAttribute('src', "img/empty.png");
 }
 
 function checkEnd() {
@@ -103,3 +103,7 @@ document.querySelector('#end_popup > button').addEventListener('click', function
     updateScore();
     displayEnd();
 })
+
+/* Footer */
+const year = document.getElementById('current-year');
+year.innerHTML = new Date().getFullYear();
