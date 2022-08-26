@@ -225,15 +225,16 @@ a
 }
 
 
-@media all and (max-device-width: 480px)
+@media screen and (max-width: 480px)
 {
     header
     {
-        height: 20vh;
+        height: 17vh;
+        line-height: 3rem;
     }
     main
     {
-        height: 75vh;
+        height: 78vh;
     }
     .weapon
     {
@@ -244,8 +245,8 @@ a
 
     .title
     {
-        padding-top: 1.5rem;
-        padding-bottom: 2.5rem;
+        padding-top: 1rem;
+        padding-bottom: 2rem;
     }
 
     #weapon_container .weapon
@@ -258,6 +259,6 @@ a
         display: flex;
         justify-content: center;
         gap: 1rem;
-        margin-bottom: 50px;
+        margin-bottom: 2.5rem;
     }
 }
